@@ -1,10 +1,16 @@
-import React, { Component } from 'react'
-import HelloWorld from './components/HelloWorld'
+import React from 'react'
+import PokemonCards from './components/PokemonCards'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
-class App extends Component {
-  render() {
-    return <HelloWorld />
-  }
+const App = () => {
+  return (
+    <div>
+      <Header />
+      <PokemonCards />
+      <Footer />
+    </div>
+  )
 }
 
 export default App
