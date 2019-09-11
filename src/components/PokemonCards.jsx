@@ -29,7 +29,7 @@ const PokemonCards = () => {
   }
 
   return (
-    <>
+    <main>
       <div className="top-part">
         <input
           type="search"
@@ -42,9 +42,11 @@ const PokemonCards = () => {
         {cards.map(result => {
           return (
             <li>
-              <div>Pokedex Number: {result.nationalPokedexNumber}</div>
-              <div>Type: {result.types}</div>
-              <div>Rarity: {result.rarity}</div>
+              <section>
+                <div>Pokedex Number: {result.nationalPokedexNumber}</div>
+                <div>Type: {result.types}</div>
+                <div>Rarity: {result.rarity}</div>
+              </section>
               <div>
                 <img src={result.imageUrl} style={{ height: '25rem' }} />
               </div>
@@ -52,7 +54,7 @@ const PokemonCards = () => {
           )
         })}
       </ul>
-    </>
+    </main>
   )
 }
 

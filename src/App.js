@@ -5,11 +5,11 @@ import Footer from './components/Footer'
 
 const App = () => {
   return (
-    <div>
+    <main>
       <Header />
       <PokemonCards />
       <Footer />
-    </div>
+    </main>
   )
 }
 
