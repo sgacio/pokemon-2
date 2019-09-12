@@ -4,14 +4,15 @@ $primary-text: 'Heebo', sans-serif
 $secondary-text: 'Josefin Sans', sans-serif
 $mainColor: #cb4f44
 
-=displayCard($radius)
+=displayCard($radius, $otherthing...)
   border-radius: $radius
-  border: .04rem solid yellow
-  background-color: antiquewhite
+  border: thin dotted yellow
+  background-color: darken($mainColor, 20%)
+  padding: $otherthing
 
 =upperPartOfCard
   border: .01rem solid black
-  background-color: antiquewhite
+  background-color: complement($mainColor)
   padding: 1rem
   border-radius: 40px
   opacity: .8
@@ -42,11 +43,13 @@ ul
       +upperPartOfCard
       margin: 1rem
 
-img
-  +displayCard(10px)
+div
+  img
+    +displayCard(10px)
+  
 
 main nav
-  +displayCard(5px)
+  +displayCard(5px, 1rem)
   text-align: center
   margin: 0rem 0 1rem 0
   
@@ -56,9 +59,10 @@ main nav
   height: 2rem
 
 main footer
-  +displayCard(5px)
+  +displayCard(5px, 1rem)
   text-align: center
   font-size: .9rem
 
 input
-  margin: 0 1rem 0 0 
+  margin: 0 1rem 0 0
+  
